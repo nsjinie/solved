@@ -5,26 +5,28 @@ using namespace std;
 
 int main()
 {
-    // freopen("input.txt", "rt", stdin);
+    freopen("input.txt", "rt", stdin);
 
-    int n, result = 0;
+    int n;
     cin >> n;
 
-    for (int i = n - 1; i > 0; i--)
+    for (int i = 1; i < n; i++)
     {
         string str = to_string(i);
         int tmp = i;
-        for (int j = 0; j < str.length(); j++)
+        int sum = i;
+        while (tmp != 0)
         {
-            tmp += (str[j] - '0');
+            sum += tmp % 10;
+            tmp /= 10;
         }
-        if (tmp == n)
+
+        if (sum == n)
         {
-            result = i;
+            cout << i;
+            return 0;
         }
     }
-
-    cout << result;
-
+    cout << 0;
     return 0;
 }
