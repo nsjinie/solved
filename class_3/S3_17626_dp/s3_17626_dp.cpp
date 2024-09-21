@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <algorithm>
+#include <climits>
 
 using namespace std;
 
@@ -23,7 +24,7 @@ int main()
     for (int i = 2; i <= n; i++)
     {
         int minn = INT_MAX;
-        for (int j = 1; j * j <= n; j++)
+        for (int j = 1; j * j <= i; j++)
         {
             int tmp = i - (j * j);
             minn = min(minn, dp[tmp]);
