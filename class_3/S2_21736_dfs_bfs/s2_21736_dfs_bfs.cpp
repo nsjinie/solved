@@ -1,8 +1,8 @@
 // 문제 : 21736
 //       https://www.acmicpc.net/problem/21736
-// 시간 복잡도 : O (NlogN)
-// 알고리즘 :
-// 풀이 방향 :
+// 시간 복잡도 :
+// 알고리즘 : DFS or BFS
+// 풀이 방향 : DFS 탐색 구현
 
 #include <iostream>
 
